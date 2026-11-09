@@ -1,0 +1,202 @@
+{
+  "dataset": {
+    "nama_file": "loan_approval_dataset.csv",
+    "jumlah_baris": 4269,
+    "jumlah_kolom_asli": 13,
+    "jumlah_fitur": 11,
+    "fitur": [
+      "no_of_dependents",
+      "education",
+      "self_employed",
+      "income_annum",
+      "loan_amount",
+      "loan_term",
+      "cibil_score",
+      "residential_assets_value",
+      "commercial_assets_value",
+      "luxury_assets_value",
+      "bank_asset_value"
+    ],
+    "distribusi_kelas": {
+      "Approved": 2656,
+      "Rejected": 1613
+    }
+  },
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "jumlah_train": 3415,
+    "jumlah_test": 854,
+    "distribusi_train": {
+      "Approved": 2125,
+      "Rejected": 1290
+    },
+    "distribusi_test": {
+      "Approved": 531,
+      "Rejected": 323
+    }
+  },
+  "model": {
+    "algoritma": "Decision Tree Classifier",
+    "max_depth": 10,
+    "min_samples_leaf": 5,
+    "akurasi_cross_validation": 0.9812591508052708,
+    "kedalaman_pohon": 10,
+    "jumlah_daun": 31,
+    "sklearn_version": "1.9.1"
+  },
+  "metrics": {
+    "accuracy": 0.9789227166276346,
+    "precision": 0.9789999599300367,
+    "recall": 0.9789227166276346,
+    "f1_score": 0.9788693642330788,
+    "average": "weighted",
+    "akurasi_train": 0.9874084919472914
+  },
+  "classification_report": {
+    "Approved": {
+      "precision": 0.9758812615955473,
+      "recall": 0.9905838041431262,
+      "f1-score": 0.983177570093458,
+      "support": 531.0
+    },
+    "Rejected": {
+      "precision": 0.9841269841269841,
+      "recall": 0.9597523219814241,
+      "f1-score": 0.9717868338557993,
+      "support": 323.0
+    },
+    "accuracy": 0.9789227166276346,
+    "macro avg": {
+      "precision": 0.9800041228612657,
+      "recall": 0.9751680630622752,
+      "f1-score": 0.9774822019746287,
+      "support": 854.0
+    },
+    "weighted avg": {
+      "precision": 0.9789999599300367,
+      "recall": 0.9789227166276346,
+      "f1-score": 0.9788693642330788,
+      "support": 854.0
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "Approved",
+      "Rejected"
+    ],
+    "matrix": [
+      [
+        526,
+        5
+      ],
+      [
+        13,
+        310
+      ]
+    ]
+  },
+  "feature_importance": [
+    {
+      "feature": "cibil_score",
+      "importance": 0.8454308939767249
+    },
+    {
+      "feature": "loan_term",
+      "importance": 0.08575480251907212
+    },
+    {
+      "feature": "loan_amount",
+      "importance": 0.02947797827167796
+    },
+    {
+      "feature": "income_annum",
+      "importance": 0.019279659329186984
+    },
+    {
+      "feature": "luxury_assets_value",
+      "importance": 0.009155969451559923
+    },
+    {
+      "feature": "commercial_assets_value",
+      "importance": 0.008409513434282421
+    },
+    {
+      "feature": "self_employed_Yes",
+      "importance": 0.001496577690908519
+    },
+    {
+      "feature": "residential_assets_value",
+      "importance": 0.0009946053265872687
+    },
+    {
+      "feature": "education_Not Graduate",
+      "importance": 0.0
+    },
+    {
+      "feature": "no_of_dependents",
+      "importance": 0.0
+    },
+    {
+      "feature": "bank_asset_value",
+      "importance": 0.0
+    }
+  ],
+  "feature_ranges": {
+    "no_of_dependents": {
+      "min": 0,
+      "max": 5,
+      "median": 3
+    },
+    "income_annum": {
+      "min": 200000,
+      "max": 9900000,
+      "median": 5100000
+    },
+    "loan_amount": {
+      "min": 300000,
+      "max": 39500000,
+      "median": 14500000
+    },
+    "loan_term": {
+      "min": 2,
+      "max": 20,
+      "median": 10
+    },
+    "cibil_score": {
+      "min": 300,
+      "max": 900,
+      "median": 600
+    },
+    "residential_assets_value": {
+      "min": 0,
+      "max": 29100000,
+      "median": 5600000
+    },
+    "commercial_assets_value": {
+      "min": 0,
+      "max": 19400000,
+      "median": 3700000
+    },
+    "luxury_assets_value": {
+      "min": 300000,
+      "max": 39200000,
+      "median": 14600000
+    },
+    "bank_asset_value": {
+      "min": 0,
+      "max": 14700000,
+      "median": 4600000
+    }
+  },
+  "kategori": {
+    "education": [
+      "Graduate",
+      "Not Graduate"
+    ],
+    "self_employed": [
+      "No",
+      "Yes"
+    ]
+  }
+}
